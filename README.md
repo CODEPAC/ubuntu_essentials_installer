@@ -2,7 +2,8 @@
 Repo for for installing essentials packages in ubuntu
 ### 1. Getting started
 run 
-``bash
+```bash
 cd ubuntu_essentials_installer
 chmod a+x install.sh
 ./install.sh
+```
