@@ -1,6 +1,6 @@
 #!/bin/bash
 apt update
-packages=(vim git curl)
+packages=(vim git curl htop libreoffice)
 echo -e "the following packages will be installed\n"
 echo $packages
 
