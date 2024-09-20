@@ -1,10 +1,16 @@
 #!/bin/bash
 apt update
 packages=(vim git curl htop libreoffice)
+dev_packages=(build-essential ffmpeg)
 echo -e "the following packages will be installed\n"
 echo $packages
 
 for package in "${packages[@]}"; do 
+    echo "installing $package ....."
+    apt install  -oDebug::pkgAcquire::Worker=1  -y -f "$package"
+done
+#install dev packages
+for package in "${dev_packages[@]}"; do 
     echo "installing $package ....."
     apt install  -oDebug::pkgAcquire::Worker=1  -y -f "$package"
 done
@@ -20,7 +26,8 @@ curl $URL --output $OUT_URL
 yes | dpkg -i $OUT_URL
 echo "finished installing dropbox, deleting installer"
 rm $OUT_URL
-
+#install vlc via snap
+snap install vlc
 # installing OMyZs
 echo "installing zsh"
 apt install zsh
