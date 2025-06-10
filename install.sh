@@ -6,7 +6,7 @@ TEMP_FOLDER="$USER_HOME/temp"
 mkdir -p $TEMP_FOLDER
 echo "$TEMP_FOLDER was created or already exists!"
 sudo apt update
-packages=(vim wget git curl htop btop libreoffice gnome-tweaks)
+packages=(vim wget git curl htop btop libreoffice gnome-tweaks pipx)
 dev_packages=(build-essential ffmpeg)
 echo -e "the following packages will be installed\n"
 echo $packages
