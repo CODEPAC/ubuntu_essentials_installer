@@ -32,6 +32,9 @@ curl $URL --output $OUT_LOC
 yes | sudo dpkg -i $OUT_LOC
 echo "finished installing dropbox, deleting installer"
 rm $OUT_LOC
+echo "donwloading brave browser"
+URL="https://dl.brave.com/install.sh"
+curl -fsS $URL | sh 
 echo "downloading Vscode"
 URL="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 echo $URL
